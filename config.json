@@ -1,0 +1,12 @@
+{
+    "file_id": 1,
+    "window": 500,
+    "dt": 1,
+    "pdb_file": "step5.pdb",
+    "trr_file": "step8.trr",
+    "kmin": 0,
+    "kmax": 10,
+    "kstep": 0.5,
+    "select_string": "select all",
+    "k_count": 1000
+}
