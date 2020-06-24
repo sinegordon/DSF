@@ -3,7 +3,8 @@ Simple python scripts to calculate current time correlators of 2D systems.
 
 To run, it is necessary that python version 3.6 or higher is installed on the computer. In addition, python-packages numpy, scipy and MDAnalysis are required. Starting in the following order
 1. python current_calc_XY.py
-2. python current_corr_XY.py 
+2. python current_corr_XY.py
+
 After that, the files kabsmas_ {fid}.pickle, wmas_ {fid}.pickle, jtkw_ {fid}.pickle and jlkw_ {fid}.pickle (where fid is the file_id parameter from the config.json) in which there will be arrays of wave vectors, frequencies, and correlators of transverse and longitudinal currents, respectively. Startup options are described in the config.json file. The following parameters must be set in it:
 
 pdb_file - a pdb file describing the system;
