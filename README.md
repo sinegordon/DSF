@@ -14,11 +14,11 @@ kmin - lower boundary of the wave vector in nanometers;
 
 kmax - upper boundary of the wave vector in nanometers;
 
-kstep - step along the wave vector;
+kstep - step along the wave vector in nanometers;
 
 select_string - line of choice of atoms of interest in the MDAnalysis format;
 
-file_id - startup identifier;
+file_id - startup identifier (any symbols);
 
 window - the number of frames of the correlation window;
 
