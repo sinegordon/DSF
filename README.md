@@ -26,7 +26,9 @@ window - the number of frames of the correlation window;
 dt - time distance between adjacent frames in picoseconds;
 
 Scripts using in follow articles:
-- Molecular Picture of the Transient Nature of Lipid Rafts / Dima Bolmatov*, Dmytro Soloviov, Mikhail Zhernenkov, Dmitry Zav’yalov, Eugene Mamontov, Alexey Suvorov, Yong Q. Cai, and John Katsaras // Langmuir, 2020, 36, 18, 4887–4896. https://doi.org/10.1021/acs.langmuir.0c00125
-- Anomalous Nanoscale Optoacoustic Phonon Mixing in Nematic Mesogens / D. Bolmatov, D. Soloviov, D. V. Zavyalov, L. Sharpnack, D. M. Agra-Kooijman, S. Kumar, Jiawei Zhang, M. Liu, J. Katsaras // Journal of Physical Chemistry Letters. - 2018. - Vol. 9, No. 10. - С. P. 2546-2553.
+- Molecular Picture of the Transient Nature of Lipid Rafts / Dima Bolmatov*, Dmytro Soloviov, Mikhail Zhernenkov, Dmitry Zav’yalov, Eugene Mamontov, Alexey Suvorov, Yong Q. Cai, and John Katsaras // Langmuir, 2020, 36, 18, 4887–4896. 
+https://doi.org/10.1021/acs.langmuir.0c00125
+- Anomalous Nanoscale Optoacoustic Phonon Mixing in Nematic Mesogens / D. Bolmatov, D. Soloviov, D. V. Zavyalov, L. Sharpnack, D. M. Agra-Kooijman, S. Kumar, Jiawei Zhang, M. Liu, J. Katsaras // Journal of Physical Chemistry Letters. - 2018. - Vol. 9, No. 10. - С. P. 2546-2553. https://pubs.acs.org/doi/full/10.1021/acs.jpclett.8b00926
 - Crossover from picosecond collective to single particle dynamics defines the mechanism of lateral lipid diffusion / D. Bolmatov, Y. Q. Cai, D. V. Zavyalov, M. Zhernenkov // Biochimica et Biophysica Acta (BBA) – Biomembranes. - 2018. - Vol. 1860, Issue 11. - С. P. 2446-2455. – URL : https://doi.org/10.1016/j.bbamem.2018.07.004.
 - Functional lipid pairs as building blocks of phase-separated membranes / D. Soloviov, Y. Q. Cai, D. Bolmatov, A. Suvorov, K. Zhernenkov, D. V. Zavyalov, A. Bosak, H. Uchiyama, M. Zhernenkov // Proceedings of the National Academy of Sciences of the United States of America. - 2020. - Vol. 117, Issue 9. – P. 4749-4757.
+https://www.pnas.org/content/117/9/4749
