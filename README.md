@@ -1,5 +1,5 @@
 # DSF
-Python scripts to calculate current time correlators of 2D systems.
+Python scripts to calculate current time correlations functions of 2D systems.
 
 To run, it is necessary that python version 3.6 or higher is installed on the computer. In addition, python-packages numpy, scipy and MDAnalysis are required. Starting in the following order
 1. python current_calc_XY.py
