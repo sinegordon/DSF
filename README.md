@@ -25,7 +25,7 @@ window - the number of frames of the correlation window;
 
 dt - time distance between adjacent frames in picoseconds;
 
-Scripts using in follow articles:
+These scripts were used in the following manuscripts:
 - Molecular Picture of the Transient Nature of Lipid Rafts / Dima Bolmatov*, Dmytro Soloviov, Mikhail Zhernenkov, Dmitry Zav’yalov, Eugene Mamontov, Alexey Suvorov, Yong Q. Cai, and John Katsaras // Langmuir, 2020, 36, 18, 4887–4896. 
 https://doi.org/10.1021/acs.langmuir.0c00125
 - Anomalous Nanoscale Optoacoustic Phonon Mixing in Nematic Mesogens / D. Bolmatov, D. Soloviov, D. V. Zavyalov, L. Sharpnack, D. M. Agra-Kooijman, S. Kumar, Jiawei Zhang, M. Liu, J. Katsaras // Journal of Physical Chemistry Letters. - 2018. - Vol. 9, No. 10. - С. P. 2546-2553. https://pubs.acs.org/doi/full/10.1021/acs.jpclett.8b00926
