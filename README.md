@@ -1,5 +1,5 @@
 # DSF
-Python scripts to calculate current time correlation functions of 2D systems.
+Python scripts to calculate current time correlation functions  to study vibrational landscapes, i. e. phonons in 2D soft materials
 
 To run, it is necessary that python version 3.6 or higher is installed on the computer. In addition, python-packages numpy, scipy and MDAnalysis are required. Starting in the following order
 1. python current_calc_XY.py
