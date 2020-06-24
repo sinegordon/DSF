@@ -1,5 +1,5 @@
 # DSF
-Simple python scripts for calculate dynamic structure factor in 2D systems
+Simple python scripts to calculate current time correlators of 2D systems
 To run, it is necessary that python version 3.6 or higher is installed on the computer. In addition, python-packages numpy, scipy and MDAnalysis are required. Starting in the following order
 1. python current_calc_XY.py
 2. python current_corr_XY.py 
