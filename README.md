@@ -1,13 +1,18 @@
 # DSF
 Simple python scripts for calculate dynamic structure factor in 2D systems
-Two steps:
-1. Run 'current_calc_XY.py'
-2. After 'current_calc_XY.py' is done run 'current_corr_XY.py'
-3. Result - 4 files: 
-  'kabsmas.pickle'
-  'wmas.pickle'
-  'jlkw.pickle' (longitudinal current correlator)
-  'jtkw.pickle' (transversal current correlator)
+To run, it is necessary that python version 3.6 or higher is installed on the computer. In addition, python-packages numpy, scipy and MDAnalysis are required. Starting in the following order
+1. python current_calc_XY.py
+2. python current_corr_XY.py 
+After that, the files kabsmas_ {fid}.pickle, wmas_ {fid}.pickle, jtkw_ {fid}.pickle and jlkw_ {fid}.pickle (where fid is the file_id parameter from the config.json) in which there will be arrays of wave vectors, frequencies, and correlators of transverse and longitudinal currents, respectively. Startup options are described in the config.json file. The following parameters must be set in it: 
+pdb_file - a pdb file describing the system
+trr_file - a file with a trajectory in gromacs format
+kmin - lower boundary of the wave vector
+kmax - upper boundary of the wave vector; 
+kstep - step along the wave vector; 
+select_string - line of choice of atoms of interest in the MDAnalysis format
+file_id - startup identifier
+window - the number of frames of the correlation window
+dt - time distance between adjacent frames in picoseconds
 
 Scripts usage in follow articles:
 - Anomalous Nanoscale Optoacoustic Phonon Mixing in Nematic Mesogens / D. Bolmatov, D. Soloviov, D. V. Zavyalov, L. Sharpnack, D. M. Agra-Kooijman, S. Kumar, Jiawei Zhang, M. Liu, J. Katsaras // Journal of Physical Chemistry Letters. - 2018. - Vol. 9, No. 10. - С. P. 2546-2553.
