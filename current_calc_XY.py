@@ -48,7 +48,7 @@ kunits1 = np.zeros_like(kunits)
 kunits1[:, 0] =  kunits[:, 1]
 kunits1[:, 1] = -kunits[:, 0]
     
-# Return array [jx, jy] for every k in kmas for frame index = frame_ind
+# Return array [jl, jt] for every k in kmas for frame index = frame_ind
 def frame_processing_j(frame_ind):
     bt = time.time()
     print("Processing frame # ", frame_ind)
