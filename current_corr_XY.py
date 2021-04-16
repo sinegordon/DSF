@@ -25,7 +25,7 @@ print(jt_dim)
 frame_count = jt_dim[0]
 # Delta time between dumps frame (in config in ps)
 dt = config['dt'] * 10**-12
-TomEv = 1.055/1.6*10**-12
+to_meV = 1.055/1.6*10**-12
 #Array of average jx-correlator for every k in kmas
 jlf = np.zeros((window, jt_dim[1]), dtype='complex')
 #Array of average jx-correlator for every kabs in kabsmas
@@ -61,7 +61,7 @@ for k in range(1, len(kabsmas)):
 for k in range(len(kabsmas)-1):
     jlkw[:, k] = np.abs(np.fft.fft(jlkt[:, k]))
     jtkw[:, k] = np.abs(np.fft.fft(jtkt[:, k]))
-wmas = np.fft.fftfreq(window, dt)*TomEv
+wmas = np.fft.fftfreq(window, dt) * to_meV
 print("Solve done!")
 
 with open(f'wmas_{file_id}.pickle', 'wb') as f:
