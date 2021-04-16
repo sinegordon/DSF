@@ -21,10 +21,10 @@ TRR = config['trr_file']
 u = ma.Universe(PDB, TRR, format="trr")
 et = time.time()
 print("Open timing is ", et-bt)
-# Minumum and maximum wavevector in nm^-1
+# Minumum and maximum wavevector in A^-1
 kmin = config['kmin'] / (2.0 * np.pi)
 kmax = config['kmax'] / (2.0 * np.pi)
-# Step in reciprocal space in nm^-1
+# Step in reciprocal space in A^-1
 kstep = config['kstep'] / (2.0 * np.pi)
 kabsmas = np.linspace(kmin - 0.5 * kstep, kmax + 0.5 * kstep, int((kmax - kmin + kstep) / kstep + 1))
 box = u.dimensions
