@@ -7,15 +7,15 @@ To run, it is necessary that python version 3.6 or higher is installed on the co
 
 After that, the files kabsmas_ {fid}.pickle, wmas_ {fid}.pickle, jtkw_ {fid}.pickle and jlkw_ {fid}.pickle (where fid is the file_id parameter from the config.json) in which there will be arrays of wave vectors, frequencies, and correlators of transverse and longitudinal currents, respectively. Startup options are described in the config.json file. The following parameters must be set in it:
 
-pdb_file - a pdb file describing the system;
+pdb_file - a pdb or gro file describing the system;
 
 trr_file - a file with a trajectory in gromacs format;
 
-kmin - lower boundary of the wave vector in nanometers;
+kmin - lower boundary of the wave vector in angstrom^-1;
 
-kmax - upper boundary of the wave vector in nanometers;
+kmax - upper boundary of the wave vector in angstrom^-1;
 
-kstep - step along the wave vector in nanometers;
+kstep - step along the wave vector in angstrom^-1;
 
 select_string - line of choice of atoms of interest in the MDAnalysis format;
 
