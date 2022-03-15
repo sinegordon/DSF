@@ -52,7 +52,6 @@ dkx = 2 * np.pi / box[0]
 dky = 2 * np.pi / box[1]
 frames_count = u.trajectory.n_frames
 
-# step = 4
 # Select indices of integestng atoms
 select_string = config['select_string']
 sel = u.select_atoms(select_string, periodic=True)
@@ -86,7 +85,6 @@ kunits1[:, 1] = -kunits[:, 0]
 kunits1 = np.asfortranarray(kunits1)
 
 # Return array [jl, jt] for every k in kmas for frame index = frame_ind
-# @profile
 
 
 @jit(nopython=True, parallel=True)
@@ -131,8 +129,8 @@ def main():
         frame = u.trajectory[f]
         v[f] = np.float32(frame.velocities[inds])[:, 0:2]
         p[f] = np.float32(frame.positions[inds])[:, 0:2]
-    jt[-(frames_count % step):, :, :] = frame_processing_j(v[:frames_count %
-                                                             step], p[:frames_count % step])
+    jt[-(frames_count % step):, :, :] = frame_processing_j(
+        v[:frames_count % step], p[:frames_count % step])
     return
 
 

@@ -26,7 +26,7 @@ print(jt_dim)
 frame_count = jt_dim[0]
 # Delta time between dumps frame (in config in ps)
 dt = config['dt'] * 10**-12
-to_meV = 1.055/1.6*10**-12
+to_meV = 6.582119569509066e-13
 # Array of average jx-correlator for every k in kmas
 jlf = np.zeros((window, jt_dim[1]), dtype='complex')
 # Array of average jx-correlator for every kabs in kabsmas
