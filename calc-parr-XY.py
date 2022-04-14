@@ -117,8 +117,8 @@ print(frames_count % step, flush=True)
 
 
 def main():
-    for i in range(0, frames_count//step):
-        print(i*step)
+    for i in range(0, frames_count//step*step, step):
+        print(i)
         for f in range(step):
             frame = u.trajectory[i+f]
             v[f] = np.float32(frame.velocities[inds])[:, 0:2]
@@ -139,6 +139,10 @@ main()
 # print("Solve timing is ", et-bt)
 
 file_id = config['file_id']
+
+randomks = np.random.randint(0, np.shape(jt)[1], 8)
+with open(f'jtsample_{file_id}.pickle', 'wb') as f:
+    pickle.dump(jt[:, randomks, :], f)
 with open(f'jt_{file_id}.pickle', 'wb') as f:
     pickle.dump(jt, f)
 with open(f'kmas_{file_id}.pickle', 'wb') as f:
