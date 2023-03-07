@@ -10,6 +10,19 @@ from scipy.fftpack import rfft, irfft, fftfreq
 import json
 from numba import jit, prange
 
+import argparse
+parser = argparse.ArgumentParser(
+    description="Enter fourier transform smoothing window width-to-signal ratio. i.e.\n\
+    if you have a signal 10000 samples long and you want sigma = 5000, enter '-r 0.5'."
+)
+
+parser.add_argument('--ratio', '-r', nargs=1, type=float)
+args = parser.parse_args()
+try:
+    ratio = args.ratio
+except:
+    ratio = 1/100
+
 with open('config.json', encoding='utf-8') as json_file:
     config = json.load(json_file)
 file_id = config['file_id']
@@ -79,16 +92,22 @@ for k in range(1, len(kabsmas)):
     jlkt[:, k-1] = np.mean(jlf[:, inds], axis=1)
     jtkt[:, k-1] = np.mean(jtf[:, inds], axis=1)
 
+
+# with open(f'jlkt_{file_id}.pickle', 'wb') as f:
+#     pickle.dump(jlkt, f)
+
+windowfunc = np.exp(-np.arange(len(jlkt))**2 / 2/(len(jlkt)*ratio)**2)
+
 # Calculate jlkw and jtkw for every kabs
 for k in range(len(kabsmas)-1):
-    jlkw[:, k] = np.abs(np.fft.fft(jlkt[:, k]))
-    jtkw[:, k] = np.abs(np.fft.fft(jtkt[:, k]))
+    jlkw[:, k] = np.abs(np.fft.fft(jlkt[:, k]*windowfunc))
+    jtkw[:, k] = np.abs(np.fft.fft(jtkt[:, k]*windowfunc))
 wmas = np.fft.fftfreq(window, dt) * to_meV
 print("Solve done!")
 
-with open(f'wmas_{file_id}.pickle', 'wb') as f:
+with open(f'wmas_{file_id}{int(len(jlkt) * ratio)}.pickle', 'wb') as f:
     pickle.dump(wmas, f)
-with open(f'jlkw_{file_id}.pickle', 'wb') as f:
+with open(f'jlkw_{file_id}{int(len(jlkt) * ratio)}.pickle', 'wb') as f:
     pickle.dump(jlkw, f)
-with open(f'jtkw_{file_id}.pickle', 'wb') as f:
+with open(f'jtkw_{file_id}{int(len(jlkt) * ratio)}.pickle', 'wb') as f:
     pickle.dump(jtkw, f)
